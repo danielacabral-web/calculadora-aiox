@@ -1,0 +1,175 @@
+:root {
+  --bg: #1a1410;
+  --surface: #2b2018;
+  --surface-2: #3a2c22;
+  --text: #f4ead5;
+  --muted: #b8a988;
+  --marble: #e8dcc4;
+  --gold: #c9a961;
+  --gold-bright: #e6c876;
+  --terracotta: #b85c3c;
+  --danger: #d04545;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at top, #2a1f17 0%, var(--bg) 60%),
+    var(--bg);
+  color: var(--text);
+  font-family: "Trajan Pro", "Cinzel", "Times New Roman", Georgia, serif;
+  min-height: 100vh;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px 16px;
+}
+
+.calc {
+  width: min(380px, 94vw);
+  background: linear-gradient(180deg, #322519 0%, var(--surface) 100%);
+  padding: 18px;
+  border-radius: 14px;
+  display: grid;
+  gap: 14px;
+  border: 2px solid var(--gold);
+  box-shadow:
+    0 0 0 1px rgba(201, 169, 97, 0.2) inset,
+    0 18px 50px rgba(0, 0, 0, 0.7);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Coroa de louros + brasão SPQR */
+.crown {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 0 2px;
+  color: var(--gold);
+}
+
+.laurel {
+  width: 56px;
+  height: 56px;
+  justify-self: center;
+}
+
+.crest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+.spqr {
+  font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-bright);
+  text-shadow: 0 1px 0 #000, 0 0 8px rgba(201, 169, 97, 0.35);
+  white-space: nowrap;
+}
+.motto {
+  font-size: 0.62rem;
+  letter-spacing: 0.32em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+/* Display em "mármore escuro" com moldura dourada */
+.display {
+  background: linear-gradient(180deg, #0d0805 0%, #160e08 100%);
+  color: var(--marble);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: clamp(2rem, 8vw, 3rem);
+  text-align: right;
+  padding: 16px 18px;
+  border-radius: 10px;
+  min-height: 84px;
+  overflow: hidden;
+  word-break: break-all;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.6) inset,
+    0 2px 6px rgba(0, 0, 0, 0.4);
+}
+.display.errored { color: var(--danger); }
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.key {
+  appearance: none;
+  border: 1px solid rgba(201, 169, 97, 0.18);
+  background: linear-gradient(180deg, #4a3729 0%, var(--surface-2) 100%);
+  color: var(--marble);
+  font-family: "Cinzel", "Trajan Pro", Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 16px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform .05s ease, background .15s ease, box-shadow .15s ease;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.03) inset;
+}
+.key:active { transform: translateY(1px); box-shadow: 0 0 0 rgba(0,0,0,0.4); }
+.key:hover { background: linear-gradient(180deg, #5a4332 0%, #45342a 100%); }
+
+.key--fn {
+  background: linear-gradient(180deg, #3a2c22 0%, #2a1f18 100%);
+  color: var(--muted);
+}
+.key--op {
+  background: linear-gradient(180deg, var(--terracotta) 0%, #8a4128 100%);
+  color: #fff8e8;
+  border-color: rgba(0,0,0,0.4);
+}
+.key--op:hover { background: linear-gradient(180deg, #c46a48 0%, #9a4a30 100%); }
+
+.key--eq {
+  background: linear-gradient(180deg, var(--gold-bright) 0%, var(--gold) 100%);
+  color: #2b1d0c;
+  border-color: rgba(0,0,0,0.5);
+  font-weight: 800;
+}
+.key--eq:hover { background: linear-gradient(180deg, #f0d484 0%, #d4b46c 100%); }
+
+.key--zero { text-align: left; padding-left: 28px; }
+
+/* Rodapé: meandro grego/romano em padrão CSS */
+.meander {
+  height: 14px;
+  margin-top: 2px;
+  background-image:
+    linear-gradient(90deg,
+      var(--gold) 0%, var(--gold) 12%,
+      transparent 12%, transparent 16%,
+      var(--gold) 16%, var(--gold) 28%,
+      transparent 28%, transparent 32%,
+      var(--gold) 32%, var(--gold) 44%,
+      transparent 44%, transparent 48%,
+      var(--gold) 48%, var(--gold) 60%,
+      transparent 60%, transparent 64%,
+      var(--gold) 64%, var(--gold) 76%,
+      transparent 76%, transparent 80%,
+      var(--gold) 80%, var(--gold) 92%,
+      transparent 92%, transparent 100%);
+  background-size: 80px 14px;
+  background-repeat: repeat-x;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  opacity: 0.7;
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora Romana · SPQR</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calc">
+    <header class="crown" aria-hidden="true">
+      <svg class="laurel laurel--left" viewBox="0 0 80 80" fill="none">
+        <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="currentColor">
+          <path d="M70 70 Q 30 60 14 22" stroke-width="1.6" fill="none"/>
+          <ellipse cx="62" cy="66" rx="6" ry="2.4" transform="rotate(-30 62 66)"/>
+          <ellipse cx="52" cy="60" rx="6.5" ry="2.6" transform="rotate(-35 52 60)"/>
+          <ellipse cx="42" cy="52" rx="7" ry="2.7" transform="rotate(-42 42 52)"/>
+          <ellipse cx="33" cy="43" rx="7" ry="2.7" transform="rotate(-50 33 43)"/>
+          <ellipse cx="25" cy="33" rx="6.5" ry="2.6" transform="rotate(-58 25 33)"/>
+          <ellipse cx="19" cy="22" rx="5.5" ry="2.3" transform="rotate(-65 19 22)"/>
+          <ellipse cx="58" cy="55" rx="5.5" ry="2.2" transform="rotate(20 58 55)"/>
+          <ellipse cx="48" cy="46" rx="6" ry="2.3" transform="rotate(15 48 46)"/>
+          <ellipse cx="38" cy="38" rx="6" ry="2.3" transform="rotate(8 38 38)"/>
+          <ellipse cx="29" cy="28" rx="5" ry="2" transform="rotate(0 29 28)"/>
+        </g>
+      </svg>
+
+      <div class="crest">
+        <span class="spqr">CALCVLATOR ROMANVS</span>
+        <span class="motto">S · P · Q · R   ·   MMXXVI</span>
+      </div>
+
+      <svg class="laurel laurel--right" viewBox="0 0 80 80" fill="none">
+        <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round" fill="currentColor">
+          <path d="M10 70 Q 50 60 66 22" stroke-width="1.6" fill="none"/>
+          <ellipse cx="18" cy="66" rx="6" ry="2.4" transform="rotate(30 18 66)"/>
+          <ellipse cx="28" cy="60" rx="6.5" ry="2.6" transform="rotate(35 28 60)"/>
+          <ellipse cx="38" cy="52" rx="7" ry="2.7" transform="rotate(42 38 52)"/>
+          <ellipse cx="47" cy="43" rx="7" ry="2.7" transform="rotate(50 47 43)"/>
+          <ellipse cx="55" cy="33" rx="6.5" ry="2.6" transform="rotate(58 55 33)"/>
+          <ellipse cx="61" cy="22" rx="5.5" ry="2.3" transform="rotate(65 61 22)"/>
+          <ellipse cx="22" cy="55" rx="5.5" ry="2.2" transform="rotate(-20 22 55)"/>
+          <ellipse cx="32" cy="46" rx="6" ry="2.3" transform="rotate(-15 32 46)"/>
+          <ellipse cx="42" cy="38" rx="6" ry="2.3" transform="rotate(-8 42 38)"/>
+          <ellipse cx="51" cy="28" rx="5" ry="2" transform="rotate(0 51 28)"/>
+        </g>
+      </svg>
+    </header>
+
+    <output id="display" class="display" aria-live="polite">0</output>
+
+    <div class="keypad" role="group" aria-label="Teclado da calculadora">
+      <button class="key key--fn" data-key="C" aria-label="Limpar">C</button>
+      <button class="key key--fn" data-key="Back" aria-label="Apagar último dígito">←</button>
+      <button class="key key--op" data-key="/" aria-label="Dividir">÷</button>
+      <button class="key key--op" data-key="*" aria-label="Multiplicar">×</button>
+
+      <button class="key" data-key="7" aria-label="Sete">7</button>
+      <button class="key" data-key="8" aria-label="Oito">8</button>
+      <button class="key" data-key="9" aria-label="Nove">9</button>
+      <button class="key key--op" data-key="-" aria-label="Subtrair">−</button>
+
+      <button class="key" data-key="4" aria-label="Quatro">4</button>
+      <button class="key" data-key="5" aria-label="Cinco">5</button>
+      <button class="key" data-key="6" aria-label="Seis">6</button>
+      <button class="key key--op" data-key="+" aria-label="Somar">+</button>
+
+      <button class="key" data-key="1" aria-label="Um">1</button>
+      <button class="key" data-key="2" aria-label="Dois">2</button>
+      <button class="key" data-key="3" aria-label="Três">3</button>
+      <button class="key key--eq" data-key="=" aria-label="Igual" style="grid-row: span 2">=</button>
+
+      <button class="key key--zero" data-key="0" aria-label="Zero" style="grid-column: span 2">0</button>
+      <button class="key" data-key="." aria-label="Vírgula decimal">.</button>
+    </div>
+
+    <footer class="meander" aria-hidden="true"></footer>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
