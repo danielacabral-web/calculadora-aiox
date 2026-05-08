@@ -1,6 +1,6 @@
-# Calculadora AIOX
+# Calculadora Romana
 
-Calculadora web client-side construída atravessando os **8 passos do Story Development Cycle** do AIOX.
+Calculadora web client-side com tema **SPQR** (louros, brasão, colunata, paleta ouro/mármore/terracota), construída atravessando os **8 passos do Story Development Cycle** do AIOX.
 
 > Exercício do encontro: ideação → produto → arquitetura → story → validação → implementação → QA → entrega. Sem deploy. Entrega = PR aberto.
 
