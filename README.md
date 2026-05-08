@@ -13,9 +13,9 @@ Calculadora web client-side construída atravessando os **8 passos do Story Deve
 ## Rodar
 
 ```bash
-# UI: basta abrir no browser
-open calculadora/index.html   # macOS
-start calculadora/index.html  # Windows
+# UI — precisa de um servidor HTTP (ES modules não rodam via file://)
+cd calculadora && python -m http.server 5173
+# abrir http://localhost:5173 no browser
 
 # Testes
 cd calculadora && npm test
