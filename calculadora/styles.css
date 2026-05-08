@@ -28,7 +28,7 @@ html, body {
 .calc {
   width: min(380px, 94vw);
   background: linear-gradient(180deg, #322519 0%, var(--surface) 100%);
-  padding: 18px 18px 0;
+  padding: 18px;
   border-radius: 14px;
   display: grid;
   gap: 14px;
@@ -37,6 +37,7 @@ html, body {
     0 0 0 1px rgba(201, 169, 97, 0.2) inset,
     0 18px 50px rgba(0, 0, 0, 0.7);
   position: relative;
+  overflow: hidden;
 }
 
 /* Coroa de louros + brasão SPQR */
@@ -144,14 +145,27 @@ html, body {
 
 .key--zero { text-align: left; padding-left: 28px; }
 
-/* Rodapé com colunatas estilizadas */
-.columns {
-  margin: 4px -18px 0;
-  color: var(--gold);
-  line-height: 0;
-}
-.columns-svg {
-  display: block;
-  width: 100%;
-  height: 22px;
+/* Rodapé: meandro grego/romano em padrão CSS */
+.meander {
+  height: 14px;
+  margin-top: 2px;
+  background-image:
+    linear-gradient(90deg,
+      var(--gold) 0%, var(--gold) 12%,
+      transparent 12%, transparent 16%,
+      var(--gold) 16%, var(--gold) 28%,
+      transparent 28%, transparent 32%,
+      var(--gold) 32%, var(--gold) 44%,
+      transparent 44%, transparent 48%,
+      var(--gold) 48%, var(--gold) 60%,
+      transparent 60%, transparent 64%,
+      var(--gold) 64%, var(--gold) 76%,
+      transparent 76%, transparent 80%,
+      var(--gold) 80%, var(--gold) 92%,
+      transparent 92%, transparent 100%);
+  background-size: 80px 14px;
+  background-repeat: repeat-x;
+  border-top: 1px solid var(--gold);
+  border-bottom: 1px solid var(--gold);
+  opacity: 0.7;
 }
