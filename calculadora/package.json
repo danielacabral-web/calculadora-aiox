@@ -4,6 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/calculator.test.js"
+    "test": "node --test tests/calculator.test.js",
+    "dev": "python -m http.server 5173",
+    "start": "python -m http.server 5173"
   }
 }
