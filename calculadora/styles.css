@@ -64,10 +64,11 @@ html, body {
 .spqr {
   font-family: "Cinzel", "Trajan Pro", Georgia, serif;
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 1.05rem;
   letter-spacing: 0.18em;
   color: var(--gold-bright);
   text-shadow: 0 1px 0 #000, 0 0 8px rgba(201, 169, 97, 0.35);
+  white-space: nowrap;
 }
 .motto {
   font-size: 0.62rem;
