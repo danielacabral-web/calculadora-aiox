@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Calculadora AIOX</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="calc">
+    <output id="display" class="display" aria-live="polite">0</output>
+
+    <div class="keypad" role="group" aria-label="Teclado da calculadora">
+      <button class="key key--fn" data-key="C" aria-label="Limpar">C</button>
+      <button class="key key--fn" data-key="Back" aria-label="Apagar último dígito">←</button>
+      <button class="key key--op" data-key="/" aria-label="Dividir">÷</button>
+      <button class="key key--op" data-key="*" aria-label="Multiplicar">×</button>
+
+      <button class="key" data-key="7" aria-label="Sete">7</button>
+      <button class="key" data-key="8" aria-label="Oito">8</button>
+      <button class="key" data-key="9" aria-label="Nove">9</button>
+      <button class="key key--op" data-key="-" aria-label="Subtrair">−</button>
+
+      <button class="key" data-key="4" aria-label="Quatro">4</button>
+      <button class="key" data-key="5" aria-label="Cinco">5</button>
+      <button class="key" data-key="6" aria-label="Seis">6</button>
+      <button class="key key--op" data-key="+" aria-label="Somar">+</button>
+
+      <button class="key" data-key="1" aria-label="Um">1</button>
+      <button class="key" data-key="2" aria-label="Dois">2</button>
+      <button class="key" data-key="3" aria-label="Três">3</button>
+      <button class="key key--eq" data-key="=" aria-label="Igual" style="grid-row: span 2">=</button>
+
+      <button class="key key--zero" data-key="0" aria-label="Zero" style="grid-column: span 2">0</button>
+      <button class="key" data-key="." aria-label="Vírgula decimal">.</button>
+    </div>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
